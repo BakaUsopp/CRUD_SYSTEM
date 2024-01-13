@@ -53,7 +53,7 @@ public class UserConfig {
                                 .requestMatchers("/api/v1/user/**").hasRole("ADMIN")
                                 .requestMatchers("/api/v1/test/**").permitAll()
                                 .anyRequest().authenticated()).
-                formLogin(s ->s.loginProcessingUrl("/api/v1/user/login").loginProcessingUrl("/api/v1/user/login")
+                formLogin(s ->s.loginProcessingUrl("/api/v1/user/login")
                         .successForwardUrl("/api/v1/user/**")
                         .failureUrl("/api/v1/user/login-error").permitAll())
                 .logout(logout -> logout.logoutUrl("/api/v1/user/logout").logoutSuccessUrl("/api/v1/user/logout-success"));
