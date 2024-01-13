@@ -56,8 +56,8 @@ public class UserConfig {
                 formLogin(s ->s.loginProcessingUrl("/api/v1/user/login").loginProcessingUrl("/api/v1/user/login")
                         .successForwardUrl("/api/v1/user/**")
                         .failureUrl("/api/v1/user/login-error").permitAll())
-                .logout(logout -> logout.logoutUrl("/api/v1/user/logout").logoutSuccessUrl("/api/v1/user/logout-success"))
-                .addFilterBefore(new JwtTokenFilter(), JwtTokenFilter.class);
+                .logout(logout -> logout.logoutUrl("/api/v1/user/logout").logoutSuccessUrl("/api/v1/user/logout-success"));
+//                .addFilterBefore(new JwtTokenFilter(), JwtTokenFilter.class);
 
 
 
